@@ -96,6 +96,7 @@
 				39254CF61E7C73F90018D022 /* LogType.swift */,
 			);
 			name = Utilities;
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 		39254CFF1E7C8D880018D022 /* Extensions */ = {
@@ -103,7 +104,7 @@
 			children = (
 				39254D001E7C8D960018D022 /* NSRange+Extension.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		39254D021E7C91030018D022 /* Register/Author */ = {
@@ -113,6 +114,7 @@
 				39254CFD1E7C896F0018D022 /* AuthorizationViewController.swift */,
 			);
 			name = Register/Author;
+			path = "Register:Author";
 			sourceTree = "<group>";
 		};
 		39254D031E7C91270018D022 /* Settings */ = {
@@ -120,7 +122,7 @@
 			children = (
 				39254D061E7C91670018D022 /* SettingsTableViewController.swift */,
 			);
-			name = Settings;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
