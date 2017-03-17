@@ -8,20 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		39254CDE1E7C70A80018D022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CDD1E7C70A80018D022 /* AppDelegate.swift */; };
-		39254CE01E7C70A80018D022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CDF1E7C70A80018D022 /* ViewController.swift */; };
 		39254CE31E7C70A80018D022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39254CE11E7C70A80018D022 /* Main.storyboard */; };
 		39254CE51E7C70A80018D022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39254CE41E7C70A80018D022 /* Assets.xcassets */; };
 		39254CE81E7C70A80018D022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39254CE61E7C70A80018D022 /* LaunchScreen.storyboard */; };
+		39254CF01E7C729C0018D022 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39254CEF1E7C729C0018D022 /* Authorization.storyboard */; };
+		39254CF21E7C72A80018D022 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CF11E7C72A80018D022 /* User.swift */; };
+		39254CF51E7C73DD0018D022 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CF41E7C73DD0018D022 /* Log.swift */; };
+		39254CF71E7C73F90018D022 /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CF61E7C73F90018D022 /* LogType.swift */; };
+		39254CF91E7C75BD0018D022 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39254CF81E7C75BD0018D022 /* Registration.storyboard */; };
+		39254CFC1E7C7A570018D022 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CFB1E7C7A570018D022 /* RegistrationViewController.swift */; };
+		39254CFE1E7C896F0018D022 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CFD1E7C896F0018D022 /* AuthorizationViewController.swift */; };
+		39254D011E7C8D960018D022 /* NSRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254D001E7C8D960018D022 /* NSRange+Extension.swift */; };
+		39254D071E7C91670018D022 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254D061E7C91670018D022 /* SettingsTableViewController.swift */; };
+		39254D091E7C974E0018D022 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39254D081E7C974E0018D022 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		39254CDA1E7C70A80018D022 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39254CDD1E7C70A80018D022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		39254CDF1E7C70A80018D022 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39254CE21E7C70A80018D022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39254CE41E7C70A80018D022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39254CE71E7C70A80018D022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39254CE91E7C70A80018D022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39254CEF1E7C729C0018D022 /* Authorization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		39254CF11E7C72A80018D022 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		39254CF41E7C73DD0018D022 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		39254CF61E7C73F90018D022 /* LogType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogType.swift; sourceTree = "<group>"; };
+		39254CF81E7C75BD0018D022 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		39254CFB1E7C7A570018D022 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		39254CFD1E7C896F0018D022 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		39254D001E7C8D960018D022 /* NSRange+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Extension.swift"; sourceTree = "<group>"; };
+		39254D061E7C91670018D022 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		39254D081E7C974E0018D022 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,55 @@
 		39254CDC1E7C70A80018D022 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				39254CF31E7C73C30018D022 /* Utilities */,
+				39254CF11E7C72A80018D022 /* User.swift */,
 				39254CDD1E7C70A80018D022 /* AppDelegate.swift */,
-				39254CDF1E7C70A80018D022 /* ViewController.swift */,
+				39254CEF1E7C729C0018D022 /* Authorization.storyboard */,
+				39254CF81E7C75BD0018D022 /* Registration.storyboard */,
 				39254CE11E7C70A80018D022 /* Main.storyboard */,
-				39254CE41E7C70A80018D022 /* Assets.xcassets */,
+				39254D081E7C974E0018D022 /* Settings.storyboard */,
 				39254CE61E7C70A80018D022 /* LaunchScreen.storyboard */,
+				39254D021E7C91030018D022 /* Register/Author */,
+				39254D031E7C91270018D022 /* Settings */,
+				39254CE41E7C70A80018D022 /* Assets.xcassets */,
 				39254CE91E7C70A80018D022 /* Info.plist */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		39254CF31E7C73C30018D022 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				39254CFF1E7C8D880018D022 /* Extensions */,
+				39254CF41E7C73DD0018D022 /* Log.swift */,
+				39254CF61E7C73F90018D022 /* LogType.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		39254CFF1E7C8D880018D022 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				39254D001E7C8D960018D022 /* NSRange+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		39254D021E7C91030018D022 /* Register/Author */ = {
+			isa = PBXGroup;
+			children = (
+				39254CFB1E7C7A570018D022 /* RegistrationViewController.swift */,
+				39254CFD1E7C896F0018D022 /* AuthorizationViewController.swift */,
+			);
+			name = Register/Author;
+			sourceTree = "<group>";
+		};
+		39254D031E7C91270018D022 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				39254D061E7C91670018D022 /* SettingsTableViewController.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +155,7 @@
 				TargetAttributes = {
 					39254CD91E7C70A80018D022 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = BB977G3K54;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,7 +183,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39254CF91E7C75BD0018D022 /* Registration.storyboard in Resources */,
+				39254CF01E7C729C0018D022 /* Authorization.storyboard in Resources */,
 				39254CE81E7C70A80018D022 /* LaunchScreen.storyboard in Resources */,
+				39254D091E7C974E0018D022 /* Settings.storyboard in Resources */,
 				39254CE51E7C70A80018D022 /* Assets.xcassets in Resources */,
 				39254CE31E7C70A80018D022 /* Main.storyboard in Resources */,
 			);
@@ -136,8 +199,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39254CE01E7C70A80018D022 /* ViewController.swift in Sources */,
+				39254D011E7C8D960018D022 /* NSRange+Extension.swift in Sources */,
+				39254CFE1E7C896F0018D022 /* AuthorizationViewController.swift in Sources */,
+				39254CFC1E7C7A570018D022 /* RegistrationViewController.swift in Sources */,
+				39254CF71E7C73F90018D022 /* LogType.swift in Sources */,
+				39254D071E7C91670018D022 /* SettingsTableViewController.swift in Sources */,
 				39254CDE1E7C70A80018D022 /* AppDelegate.swift in Sources */,
+				39254CF51E7C73DD0018D022 /* Log.swift in Sources */,
+				39254CF21E7C72A80018D022 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +329,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BB977G3K54;
 				INFOPLIST_FILE = Notes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Magomedkadiev.Notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +343,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BB977G3K54;
 				INFOPLIST_FILE = Notes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Magomedkadiev.Notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +372,7 @@
 				39254CEE1E7C70A80018D022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
