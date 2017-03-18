@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yVV-g5-4hl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes View Controller-->
+        <scene sceneID="xUz-I2-k4S">
+            <objects>
+                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dxj-cO-XyU" customClass="NotesViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Vd-2N-3Ib"/>
+                        <viewControllerLayoutGuide type="bottom" id="wk7-vA-tYs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U9c-JO-Hn6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BcQ-6n-AUj">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="pEE-hD-2S8">
+                            <connections>
+                                <action selector="createSectionDidClick:" destination="Dxj-cO-XyU" id="knr-2M-Psy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createSectionButton" destination="pEE-hD-2S8" id="Kgr-Ta-YQB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suE-LX-A4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="233.43328335832086"/>
+        </scene>
+        <!--Заметки-->
+        <scene sceneID="fMX-Nb-vF4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yVV-g5-4hl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Заметки" id="FNL-t4-nAb"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d6e-kG-qzi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dxj-cO-XyU" kind="relationship" relationship="rootViewController" id="pWQ-Ti-yqv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJv-BR-7Wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="233.43328335832086"/>
+        </scene>
+    </scenes>
+</document>

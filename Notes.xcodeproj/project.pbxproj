@@ -21,6 +21,8 @@
 		39254D011E7C8D960018D022 /* NSRange+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254D001E7C8D960018D022 /* NSRange+Extension.swift */; };
 		39254D071E7C91670018D022 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254D061E7C91670018D022 /* SettingsTableViewController.swift */; };
 		39254D091E7C974E0018D022 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39254D081E7C974E0018D022 /* Settings.storyboard */; };
+		3980A7551E7D506B000E4697 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3980A7541E7D506B000E4697 /* Notes.storyboard */; };
+		3980A7581E7D50DA000E4697 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3980A7571E7D50DA000E4697 /* NotesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		39254D001E7C8D960018D022 /* NSRange+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Extension.swift"; sourceTree = "<group>"; };
 		39254D061E7C91670018D022 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		39254D081E7C974E0018D022 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		3980A7541E7D506B000E4697 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
+		3980A7571E7D50DA000E4697 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +82,11 @@
 				39254CEF1E7C729C0018D022 /* Authorization.storyboard */,
 				39254CF81E7C75BD0018D022 /* Registration.storyboard */,
 				39254CE11E7C70A80018D022 /* Main.storyboard */,
+				3980A7541E7D506B000E4697 /* Notes.storyboard */,
 				39254D081E7C974E0018D022 /* Settings.storyboard */,
 				39254CE61E7C70A80018D022 /* LaunchScreen.storyboard */,
 				39254D021E7C91030018D022 /* Register/Author */,
+				3980A7561E7D50C1000E4697 /* Notes */,
 				39254D031E7C91270018D022 /* Settings */,
 				39254CE41E7C70A80018D022 /* Assets.xcassets */,
 				39254CE91E7C70A80018D022 /* Info.plist */,
@@ -123,6 +129,14 @@
 				39254D061E7C91670018D022 /* SettingsTableViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		3980A7561E7D50C1000E4697 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				3980A7571E7D50DA000E4697 /* NotesViewController.swift */,
+			);
+			path = Notes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39254CF91E7C75BD0018D022 /* Registration.storyboard in Resources */,
+				3980A7551E7D506B000E4697 /* Notes.storyboard in Resources */,
 				39254CF01E7C729C0018D022 /* Authorization.storyboard in Resources */,
 				39254CE81E7C70A80018D022 /* LaunchScreen.storyboard in Resources */,
 				39254D091E7C974E0018D022 /* Settings.storyboard in Resources */,
@@ -206,6 +221,7 @@
 				39254CFC1E7C7A570018D022 /* RegistrationViewController.swift in Sources */,
 				39254CF71E7C73F90018D022 /* LogType.swift in Sources */,
 				39254D071E7C91670018D022 /* SettingsTableViewController.swift in Sources */,
+				3980A7581E7D50DA000E4697 /* NotesViewController.swift in Sources */,
 				39254CDE1E7C70A80018D022 /* AppDelegate.swift in Sources */,
 				39254CF51E7C73DD0018D022 /* Log.swift in Sources */,
 				39254CF21E7C72A80018D022 /* User.swift in Sources */,
