@@ -18,18 +18,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="P0I-n8-AX9" kind="relationship" relationship="viewControllers" id="xy6-wv-Dqj"/>
                         <segue destination="erR-Cg-gbx" kind="relationship" relationship="viewControllers" id="0dU-5D-Le4"/>
+                        <segue destination="P0I-n8-AX9" kind="relationship" relationship="viewControllers" id="xy6-wv-Dqj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ew7-cR-Xvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-931" y="-71"/>
         </scene>
-        <!--Notes-->
+        <!--NoteList-->
         <scene sceneID="jDg-X7-SDf">
             <objects>
-                <viewControllerPlaceholder storyboardName="Notes" id="erR-Cg-gbx" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="NoteList" id="erR-Cg-gbx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="S1e-TY-TXS"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btE-RR-bul" userLabel="First Responder" sceneMemberID="firstResponder"/>
