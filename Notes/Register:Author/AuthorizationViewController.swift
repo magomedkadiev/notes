@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class AuthorizationViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,8 +20,43 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if User.isTochID {
+            authenticateUser()
+        }
+    }
+    
+    
+    // MARK: - Touch ID
+    
+    func authenticateUser() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Приложите палец, чтобы войти в приложение"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                [unowned self] success, authenticationError in
+                
+                DispatchQueue.main.async {
+                    if success {
+                        self.toMainScene()
+                    } else {
+                        Log.add(text: "Authentication failed. Input your password by yourself", .debug)
+                    }
+                }
+            }
+        } else {
+            let alert = UIAlertController(title: "Touch ID not available", message: "Your device is not configured for Touch ID.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+        }
+    }
+    
 
     // MARK: - UITextFieldDelegate
     
