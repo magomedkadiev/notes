@@ -47,6 +47,7 @@ class NoteManager {
         
         try! realm.write {
             note.isCompleted = true
+            note.createdAt = NSDate()
         }
     }
     

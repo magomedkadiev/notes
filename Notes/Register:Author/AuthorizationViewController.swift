@@ -8,12 +8,19 @@
 
 import UIKit
 import LocalAuthentication
+import RealmSwift
 
 class AuthorizationViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Properties
     
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    var window: UIWindow?
+    
+    var noteList: Results<NoteList> {
+        return try! Realm().objects(NoteList.self)
+    }
     
     // MARK: - Initialization
     
@@ -77,9 +84,27 @@ class AuthorizationViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Segue 
     
     func toMainScene() {
-        performSegue(withIdentifier: "toMainScene", sender: self)
-    }
+        
+        if noteList.count > 0 && User.isOpenLastCreatedNote {
+            let storyboard = UIStoryboard(name: "NoteList", bundle: nil)
+            let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "NoteViewController") as! NoteViewController
+            initialViewController.selectedList = noteList[0]
+            if User.isOpenLastCreatedNote {
+                initialViewController.isOpenLastCreatedNote = true
+            } else {
+                initialViewController.isOpenLastCreatedNote = false
+            }
+            let navigationController = UINavigationController(rootViewController: initialViewController)
 
+            appDelegate.window?.rootViewController = navigationController
+            appDelegate.window?.makeKeyAndVisible()
+            
+        } else {
+            performSegue(withIdentifier: "toMainScene", sender: self)
+        }
+    }
 }
 
 

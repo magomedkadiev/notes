@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ANo-Ha-cIX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ANo-Ha-cIX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,6 +56,28 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rcW-w4-Qgd" id="cAF-cm-wmB">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Открывать последнюю заметку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMA-b2-VpI">
+                                                    <rect key="frame" x="17" y="11" width="282" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvT-oi-V0M">
+                                                    <rect key="frame" x="307" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="openLastNoteValueDidChange:" destination="ryU-ud-100" eventType="valueChanged" id="xu2-M4-JV3"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CvT-oi-V0M" firstAttribute="leading" secondItem="YMA-b2-VpI" secondAttribute="trailing" constant="8" id="58H-j9-q5l"/>
+                                                <constraint firstItem="YMA-b2-VpI" firstAttribute="leading" secondItem="cAF-cm-wmB" secondAttribute="leadingMargin" constant="9" id="D3u-Zc-ouK"/>
+                                                <constraint firstAttribute="trailing" secondItem="CvT-oi-V0M" secondAttribute="trailing" constant="19" id="M57-M0-bsb"/>
+                                                <constraint firstItem="CvT-oi-V0M" firstAttribute="top" secondItem="cAF-cm-wmB" secondAttribute="top" constant="6" id="OJy-Tt-a1R"/>
+                                                <constraint firstItem="YMA-b2-VpI" firstAttribute="centerY" secondItem="cAF-cm-wmB" secondAttribute="centerY" id="fHa-bE-vGC"/>
+                                                <constraint firstAttribute="bottom" secondItem="CvT-oi-V0M" secondAttribute="bottom" constant="6" id="sB7-Zc-hR1"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nd8-Q2-mj4">
@@ -103,6 +125,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Tnh-d5-WeL"/>
                     <connections>
+                        <outlet property="openLastNoteSwitch" destination="CvT-oi-V0M" id="5kD-Fr-3L5"/>
                         <outlet property="touchIDSwitch" destination="fRS-6R-PWt" id="ysS-nR-m39"/>
                     </connections>
                 </tableViewController>

@@ -19,6 +19,8 @@ class NoteViewController: UIViewController {
     
     @IBOutlet weak var createNoteButton: UIBarButtonItem!
     
+    var isOpenLastCreatedNote: Bool = false
+    
     var completedNotes: Results<Note>!
     
     var openNotes: Results<Note>! {
@@ -51,11 +53,34 @@ class NoteViewController: UIViewController {
         self.title = selectedList.name
         openNotes = selectedList.notes.filter("isCompleted = %@", false).sorted(byKeyPath: "createdAt", ascending:false)
         completedNotes = selectedList.notes.filter("isCompleted = %@", true).sorted(byKeyPath: "createdAt", ascending:false)
+        
+        if isOpenLastCreatedNote {
+            setupBackButton()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func setupBackButton() {
+        let button = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBack))
+        self.navigationItem.leftBarButtonItem = button
+
+    }
+    
+    func goBack() {
+        let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateInitialViewController()
+        
+        if let tabbarController = initialViewController as? UITabBarController {
+            tabBarController?.selectedIndex = 0
+            appDelegate.window?.rootViewController = tabbarController
+            appDelegate.window?.makeKeyAndVisible()
+
+        }
     }
  
     // MARK: - Create Note Action
@@ -142,4 +167,21 @@ extension NoteViewController: UITableViewDataSource {
         
         return cell
     }
+}
+
+fileprivate func getTabBarViewController() -> UITabBarController {
+    let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+    let rootViewController = appDelegate.window!.rootViewController!
+    
+    if let tabbarController = rootViewController as? UITabBarController {
+        return tabbarController
+    } else if let navigationController = rootViewController as? UINavigationController {
+        for viewController in navigationController.viewControllers {
+            if viewController.isKind(of: UITabBarController.self) {
+                return viewController as! UITabBarController
+            }
+        }
+    }
+    assert(false, "CANT FIND TABBAR CONTROLLER")
+    return rootViewController as! UITabBarController
 }

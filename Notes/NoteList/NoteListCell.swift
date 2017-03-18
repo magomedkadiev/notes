@@ -14,9 +14,14 @@ class NoteListCell: UITableViewCell {
     
     @IBOutlet weak var noteListNameLabel: UILabel!
     
+    @IBOutlet weak var completedCountLabel: UILabel!
+    
     var noteList: NoteList! {
         didSet {
+            let completedCount = noteList.notes.filter("isCompleted = %@", false)
+            
             noteListNameLabel.text = noteList.name
+            completedCountLabel.text = "\(completedCount.count)"
         }
     }
 }

@@ -14,9 +14,12 @@ class SettingsTableViewController: UITableViewController {
     
     @IBOutlet weak var touchIDSwitch: UISwitch!
     
+    @IBOutlet weak var openLastNoteSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         touchIDSwitch.isOn = User.isTochID
+        openLastNoteSwitch.isOn = User.isOpenLastCreatedNote
     }
     
     // MARK: - UISwitch Action
@@ -30,6 +33,14 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func openLastNoteValueDidChange(_ sender: UISwitch) {
+        switch sender.isOn {
+        case true:
+            User.isOpenLastCreatedNote = true
+        case false:
+            User.isOpenLastCreatedNote = false
+        }
+    }
  
     // MARK: - Logout Action
     

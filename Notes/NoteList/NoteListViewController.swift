@@ -60,7 +60,7 @@ class NoteListViewController: UIViewController {
     // MARK: - Deinitialization
     
     deinit {
-        noteListNotificationToken.stop()
+        //noteListNotificationToken.stop()
     }
     
     // MARK: - Create Section Action

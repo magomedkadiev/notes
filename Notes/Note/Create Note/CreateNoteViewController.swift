@@ -23,7 +23,10 @@ class CreateNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        noteTextView.becomeFirstResponder()
+        
         guard note == nil else {
+            // updating note
             noteTextView.text = note.name
             return
         }
@@ -40,6 +43,7 @@ class CreateNoteViewController: UIViewController {
         }
         
         guard note == nil else {
+            // updating note
             NoteManager.shared.updateSelectedNote(note, name: noteTextView.text)
             dismiss(animated: true, completion: nil)
             return

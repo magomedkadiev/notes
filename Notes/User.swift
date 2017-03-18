@@ -61,6 +61,17 @@ class User {
         }
     }
     
+    /// The bool value indicate opening last note.
+    static var isOpenLastCreatedNote: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "user.isOpenLastCreatedNote")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "user.isOpenLastCreatedNote")
+            Log.add(text: "User.isOpenLastCreatedNote = \(newValue)", .info)
+        }
+    }
+    
     
 
 }
