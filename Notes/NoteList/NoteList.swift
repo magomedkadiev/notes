@@ -15,5 +15,5 @@ class NoteList: Object {
     
     dynamic var createdAt = NSDate()
     
-    let tasks = List<Note>()
+    let notes = List<Note>()
 }

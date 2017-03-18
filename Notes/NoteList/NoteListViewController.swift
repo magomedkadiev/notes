@@ -35,7 +35,7 @@ class NoteListViewController: UIViewController {
                     tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
                                          with: .none)
                     tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
-                                         with: .none)
+                                         with: .fade)
                     tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
                                          with: .none)
                     tableView.endUpdates()
@@ -55,6 +55,12 @@ class NoteListViewController: UIViewController {
         super.viewDidLoad()
 
         noteList = NoteManager.shared.noteList.sorted(byKeyPath: "createdAt", ascending:false)
+    }
+    
+    // MARK: - Deinitialization
+    
+    deinit {
+        noteListNotificationToken.stop()
     }
     
     // MARK: - Create Section Action
@@ -80,7 +86,10 @@ class NoteListViewController: UIViewController {
                 return
             }
             
-            NoteManager.shared.addNoteList(name: name)
+            let noteList = NoteList()
+            noteList.name = name
+            
+            NoteManager.shared.addNoteList(noteList)
         }))
         
         alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
@@ -115,6 +124,13 @@ extension NoteListViewController: UITableViewDataSource {
         cell.noteList = noteList[indexPath.row]
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let selectedList = noteList[indexPath.row]
+            NoteManager.shared.removeList(selectedList)
+        }
     }
 }
 

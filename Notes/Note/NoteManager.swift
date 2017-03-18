@@ -18,17 +18,44 @@ class NoteManager {
         return try! Realm().objects(NoteList.self)
     }
     
-    func addNoteList(name: String) {
+    func addNoteList(_ list: NoteList) {
         let realm = try! Realm()
-        let newNoteList = NoteList()
-        realm.beginWrite()
         
-        newNoteList.name = name
-        realm.add(newNoteList)
-        
-        try! realm.commitWrite()
-
+        try! realm.write {
+            realm.add(list)
+        }
     }
     
+    func removeList(_ list: NoteList) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            realm.delete(list)
+        }
+    }
+    
+    func addNote(_ note: Note, toSelectedList: NoteList) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            toSelectedList.notes.append(note)
+        }
+    }
+    
+    func makeCompleteSelectedNote(note: Note) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            note.isCompleted = true
+        }
+    }
+    
+    func updateSelectedNote(_ note: Note, name: String) {
+        let realm = try! Realm()
+        
+        try! realm.write {
+            note.name = name
+        }
+    }
     
 }
