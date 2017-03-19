@@ -51,7 +51,7 @@ class NoteManager {
         }
     }
     
-    func updateSelectedNote(_ note: Note, name: String) {
+    func updateSelectedNote(_ note: Note, name: String, notified: Bool = false) {
         let realm = try! Realm()
         
         try! realm.write {

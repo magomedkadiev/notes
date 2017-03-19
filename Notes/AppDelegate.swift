@@ -8,9 +8,10 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Log.add(text: "\(Realm.Configuration.defaultConfiguration.fileURL!)", .debug)
 
+        registerForPushNotifications(application)
+        application.applicationIconBadgeNumber = 0
+        
         if !User.isRegistered {
             window?.rootViewController = UIStoryboard(name: "Registration", bundle: nil).instantiateInitialViewController()!
             return true
@@ -30,6 +34,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         return true
+    }
+    
+    func registerForPushNotifications(_ application: UIApplication) {
+        
+        if #available(iOS 10.0, *){
+            UNUserNotificationCenter.current().delegate = self
+            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert], completionHandler: {(granted, error) in
+                if (granted)
+                {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            })
+        } else {
+            let notificationSettings = UIUserNotificationSettings(
+                types: [.badge, .sound, .alert], categories: nil)
+            application.registerUserNotificationSettings(notificationSettings)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

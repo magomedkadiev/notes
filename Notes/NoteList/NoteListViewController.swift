@@ -87,6 +87,7 @@ class NoteListViewController: UIViewController {
             }
             
             let noteList = NoteList()
+            noteList.id = noteList.incrementID()
             noteList.name = name
             
             NoteManager.shared.addNoteList(noteList)

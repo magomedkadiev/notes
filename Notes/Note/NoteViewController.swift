@@ -94,7 +94,7 @@ class NoteViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "toCreationNote":
-            let createNoteViewController = segue.destination as! CreateNoteViewController
+            let createNoteViewController = segue.destination as! CreateNoteTableViewController
             createNoteViewController.selectedList = selectedList
             createNoteViewController.note = sender as? Note
             

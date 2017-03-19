@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		39034B261E7DBE0100AF2833 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39034B251E7DBE0100AF2833 /* NoteCell.swift */; };
+		391AD91A1E7F0B79006FEDB9 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391AD9191E7F0B79006FEDB9 /* LocalNotificationHelper.swift */; };
+		391AD91C1E7F1652006FEDB9 /* localNotificationSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 391AD91B1E7F1652006FEDB9 /* localNotificationSound.mp3 */; };
 		39254CDE1E7C70A80018D022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39254CDD1E7C70A80018D022 /* AppDelegate.swift */; };
 		39254CE31E7C70A80018D022 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39254CE11E7C70A80018D022 /* Main.storyboard */; };
 		39254CE51E7C70A80018D022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39254CE41E7C70A80018D022 /* Assets.xcassets */; };
@@ -33,7 +35,7 @@
 		3980A76D1E7D5EA0000E4697 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3980A76C1E7D5EA0000E4697 /* Realm.framework */; };
 		3980A76E1E7D5EA0000E4697 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3980A76C1E7D5EA0000E4697 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3980A7701E7D634D000E4697 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3980A76F1E7D634D000E4697 /* NoteViewController.swift */; };
-		3980A7731E7D6612000E4697 /* CreateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3980A7721E7D6612000E4697 /* CreateNoteViewController.swift */; };
+		3980A7731E7D6612000E4697 /* CreateNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3980A7721E7D6612000E4697 /* CreateNoteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		39034B251E7DBE0100AF2833 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		391AD9191E7F0B79006FEDB9 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
+		391AD91B1E7F1652006FEDB9 /* localNotificationSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = localNotificationSound.mp3; sourceTree = "<group>"; };
 		39254CDA1E7C70A80018D022 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39254CDD1E7C70A80018D022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39254CE21E7C70A80018D022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +84,7 @@
 		3980A7681E7D5E98000E4697 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		3980A76C1E7D5EA0000E4697 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		3980A76F1E7D634D000E4697 /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
-		3980A7721E7D6612000E4697 /* CreateNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNoteViewController.swift; sourceTree = "<group>"; };
+		3980A7721E7D6612000E4697 /* CreateNoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNoteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +144,11 @@
 		39254CF31E7C73C30018D022 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				391AD91B1E7F1652006FEDB9 /* localNotificationSound.mp3 */,
 				39254CFF1E7C8D880018D022 /* Extensions */,
 				39254CF41E7C73DD0018D022 /* Log.swift */,
 				39254CF61E7C73F90018D022 /* LogType.swift */,
+				391AD9191E7F0B79006FEDB9 /* LocalNotificationHelper.swift */,
 			);
 			name = Utilities;
 			path = Utilites;
@@ -208,7 +214,7 @@
 		3980A7711E7D65EB000E4697 /* Create Note */ = {
 			isa = PBXGroup;
 			children = (
-				3980A7721E7D6612000E4697 /* CreateNoteViewController.swift */,
+				3980A7721E7D6612000E4697 /* CreateNoteTableViewController.swift */,
 			);
 			path = "Create Note";
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				39254CE81E7C70A80018D022 /* LaunchScreen.storyboard in Resources */,
 				39254D091E7C974E0018D022 /* Settings.storyboard in Resources */,
 				39254CE51E7C70A80018D022 /* Assets.xcassets in Resources */,
+				391AD91C1E7F1652006FEDB9 /* localNotificationSound.mp3 in Resources */,
 				39254CE31E7C70A80018D022 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,11 +327,12 @@
 				39254D071E7C91670018D022 /* SettingsTableViewController.swift in Sources */,
 				3980A7601E7D565E000E4697 /* NoteManager.swift in Sources */,
 				3980A7581E7D50DA000E4697 /* NoteListViewController.swift in Sources */,
+				391AD91A1E7F0B79006FEDB9 /* LocalNotificationHelper.swift in Sources */,
 				3980A7621E7D577E000E4697 /* NoteList.swift in Sources */,
 				39254CDE1E7C70A80018D022 /* AppDelegate.swift in Sources */,
 				39254CF51E7C73DD0018D022 /* Log.swift in Sources */,
 				39254CF21E7C72A80018D022 /* User.swift in Sources */,
-				3980A7731E7D6612000E4697 /* CreateNoteViewController.swift in Sources */,
+				3980A7731E7D6612000E4697 /* CreateNoteTableViewController.swift in Sources */,
 				3980A7651E7D5824000E4697 /* Note.swift in Sources */,
 				39034B261E7DBE0100AF2833 /* NoteCell.swift in Sources */,
 			);
